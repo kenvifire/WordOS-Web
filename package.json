@@ -1,0 +1,47 @@
+{
+  "name": "WordOS-Web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "jest": {
+		"scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+		"unmockedModulePathPatterns": [
+			"<rootDir>/node_modules/react",
+			"<rootDir>/node_modules/react-dom",
+			"<rootDir>/node_modules/react-addons-test-utils",
+			"<rootDir>/node_modules/fbjs"
+		]
+	},
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-jest": "^6.0.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "jest-cli": "^0.8.2",
+    "react-addons-test-utils": "^0.14.7",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "chance": "^1.0.0",
+    "history": "^2.0.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0",
+    "superagent": "^1.7.2"
+  }
+}
