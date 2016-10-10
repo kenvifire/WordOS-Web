@@ -3,6 +3,8 @@ import ajax from 'superagent';
 import {Link} from 'react-router';
 import Wordlist from './Wordlist';
 
+var Config = require('Config')
+
 
 class Book extends React.Component{
 	constructor(props) {
@@ -14,7 +16,7 @@ class Book extends React.Component{
 	}	
 
 	componentWillMount() {
-		ajax.get(`http://localhost:8080/words/getChapter?book=${this.props.params.book}`)
+		ajax.get(`${Config.serverUrl}/words/getChapter?book=${this.props.params.book}`)
 		.end(
 			(error, response) => {
 				if(!error && response) {

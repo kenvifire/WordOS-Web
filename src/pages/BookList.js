@@ -13,7 +13,7 @@ class BookList extends React.Component {
 
 	
 	componentWillMount() {
-		ajax.get('http://localhost:8080/words/getBookList')
+		ajax.get('http://localhost:8088/words/getBookList')
 			.end(
 				(error, response) => {
 					if(!error && response) {
@@ -30,7 +30,7 @@ class BookList extends React.Component {
 		
 		const content = this.state.books.map(
 					(book, index) => {
-						return <p><Link to={`book/${book.book}`} >{book.book}</Link></p>
+						return <p><Link to={`book/${book.bookName}`} >{book.bookName}</Link></p>
 					}
 				);
 		return <div>{content}</div>;

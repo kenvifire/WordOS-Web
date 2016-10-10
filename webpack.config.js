@@ -27,5 +27,8 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin()
-	]
+	],
+	externals :{
+		'Config': JSON.stringify(process.env.ENV === 'production' ? require('config.prod.json') : require('./config.dev.json'))
+	}
 };	
